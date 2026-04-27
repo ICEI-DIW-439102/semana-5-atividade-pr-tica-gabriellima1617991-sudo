@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LPC Restaurantes</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<header>
+    <div class="logo">🍽️ LPC</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Restaurantes</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Descubra os melhores restaurantes</h1>
+    <p>Experiências gastronômicas perto de você</p>
+
+    <div class="busca">
+        <input type="text" id="localizacao" placeholder="Digite sua localização">
+        <button onclick="buscar()">Buscar</button>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="card">
+        <img src="img/r1.jpg">
+        <div class="info">
+            <h2>Serra Azul</h2>
+            <p>Alta gastronomia brasileira</p>
+            <div class="botoes">
+                <button onclick="detalhes('Serra Azul')">Detalhes</button>
+                <button onclick="feedback()">Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/r2.jpg">
+        <div class="info">
+            <h2>Trattoria Bella</h2>
+            <p>Italiana sofisticada</p>
+            <div class="botoes">
+                <button onclick="detalhes('Trattoria Bella')">Detalhes</button>
+                <button onclick="feedback()">Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="img/r3.jpg">
+        <div class="info">
+            <h2>Sushi Prime</h2>
+            <p>Japonesa premium</p>
+            <div class="botoes">
+                <button onclick="detalhes('Sushi Prime')">Detalhes</button>
+                <button onclick="feedback()">Feedback</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 LPC
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
+<a href="sobre.html">Sobre</a>

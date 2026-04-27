@@ -9,10 +9,10 @@ Nessa atividade,vamos evoluir o projeto para que a home-page funcione bem tanto 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome:Gabriel Rodrigues Lima
+- Matricula:908545
+- Proposta de projeto escolhida:lugar
+- Breve descrição sobre seu projeto: Site que mostra restaurantes perto da sua regiao e mostra o que esse restaurante serve ou tem.Alem de poder ver avaliaçao,comentarios e recomendaçoes sobre restaurantes e poder postar fotos do lugar.
 
 ## Print da versão responsiva com CSS puro [DESKTOP]
 
