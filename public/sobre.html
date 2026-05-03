@@ -1,50 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre o Sistema</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre o SaborBH</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-    <h1>Sobre o LPC Restaurantes</h1>
-    <nav>
-        <a href="index.html">Voltar</a>
-    </nav>
-</header>
-
-<section class="conteudo">
-
-    <h2>Sobre o Sistema</h2>
-
-    <div class="colunas">
-
-        <p>
-        O sistema LPC Restaurantes foi desenvolvido com o objetivo de recomendar estabelecimentos gastronômicos com base na localização do usuário. A plataforma busca oferecer uma experiência moderna e intuitiva, permitindo que os usuários encontrem opções de alimentação de forma rápida e eficiente.
-        </p>
-
-        <p>
-        O sistema apresenta restaurantes fictícios com base em categorias variadas, como culinária brasileira, italiana e japonesa. Cada restaurante possui informações básicas, além de opções de visualização de detalhes e envio de feedback.
-        </p>
-
-        <p>
-        A interface foi projetada com foco em usabilidade, responsividade e organização visual, utilizando conceitos modernos de design, como cards, cores harmônicas e layout adaptável para diferentes dispositivos.
-        </p>
-
-        <p>
-        Este projeto foi desenvolvido como atividade acadêmica, com o objetivo de aplicar conceitos de HTML, CSS e JavaScript na construção de uma aplicação web funcional e visualmente agradável.
-        </p>
-
+  <header class="top-header">
+    <div class="brand">
+      <img src="img/logo-chef.jpeg" alt="Logo SaborBH com chef" class="brand-logo">
+      <div class="brand-text">
+        <h1>SaborBH</h1>
+        <p>Guia gastronomico de Belo Horizonte</p>
+      </div>
     </div>
+    <form class="search-box" action="index.html">
+      <input type="search" placeholder="Volte para buscar restaurantes..." aria-label="Pesquisar">
+      <button type="submit">Ir para Home</button>
+    </form>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">Tema</button>
+      <button id="hamburgerBtn" class="icon-btn mobile-only" type="button" aria-label="Abrir menu">Menu</button>
+    </div>
+  </header>
 
-</section>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="index.html#restaurantes">Restaurantes</a>
+    <a href="sobre.html" class="active">Sobre</a>
+    <a href="index.html#configuracoes">Configuracoes</a>
+    <a href="index.html#avaliacoes">Avaliacoes</a>
+    <a href="index.html#publicacoes">Publicacoes</a>
+    <a href="index.html#feedback">Feedback</a>
+  </nav>
 
-<footer>
-    © 2026 LPC
-</footer>
+  <div class="app-shell about-shell">
+    <aside class="sidebar" id="sidebar">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#restaurantes">Restaurantes</a>
+        <a href="sobre.html" class="active">Sobre</a>
+        <a href="index.html#configuracoes">Configuracoes</a>
+        <a href="index.html#avaliacoes">Avaliacoes</a>
+        <a href="index.html#publicacoes">Publicacoes</a>
+        <a href="index.html#feedback">Feedback</a>
+      </nav>
+    </aside>
 
+    <main class="main-content">
+      <section class="hero">
+        <h2>Sobre o aplicativo SaborBH</h2>
+        <p>Uma plataforma criada para conectar pessoas aos melhores sabores da capital mineira.</p>
+      </section>
+
+      <article class="about-content">
+        <h3>1. O que e o SaborBH</h3>
+        <p>O SaborBH e uma plataforma digital pensada para ajudar moradores e visitantes de Belo Horizonte a descobrirem restaurantes com mais facilidade, confianca e praticidade. A proposta do aplicativo nasce da observacao de um desafio comum no dia a dia: muitas pessoas querem comer bem, experimentar novos lugares e encontrar ambientes que combinem com o momento, mas acabam perdendo tempo em pesquisas longas, informacoes desatualizadas e recomendacoes pouco precisas. O SaborBH organiza esse processo de forma intuitiva, reunindo em um mesmo espaco estabelecimentos da regiao de BH com dados relevantes para a decisao do usuario.</p>
+        <p>Mais do que listar nomes de restaurantes, o aplicativo funciona como um guia completo da gastronomia local, valorizando tanto casas tradicionais quanto empreendimentos novos que merecem destaque. O foco principal e proporcionar uma experiencia digital clara, moderna e responsiva, na qual o usuario consegue pesquisar por tipo de culinaria, filtrar por localizacao, comparar avaliacoes e acessar comentarios de pessoas reais que ja frequentaram os locais. Dessa forma, cada escolha se torna mais segura e alinhada ao perfil de quem busca.</p>
+        <p>Ao mesmo tempo, o SaborBH carrega um objetivo cultural importante: fortalecer a gastronomia de Belo Horizonte, reconhecida nacionalmente por sua diversidade e qualidade. A cidade combina culinaria mineira tradicional, gastronomia internacional, bares autorais, cafeterias especiais e novas tendencias culinarias. O aplicativo foi desenhado para refletir essa riqueza e facilitar o encontro entre publico e restaurantes, criando uma ponte inteligente entre oferta e demanda.</p>
+
+        <h3>2. Como funciona</h3>
+        <p>O funcionamento do SaborBH foi pensado para ser simples desde o primeiro acesso. Na tela principal, o usuario encontra uma barra de busca onde pode digitar o nome do restaurante desejado ou explorar sugestoes em destaque. A partir dai, o sistema exibe resultados organizados em cards, com foto, endereco em BH, nota media e uma descricao resumida do estilo da casa. Esse formato visual acelera a comparacao entre opcoes e reduz o tempo necessario para tomar uma decisao.</p>
+        <p>A plataforma inclui filtros por tipo de culinaria, regiao da cidade e outros criterios relevantes para diferentes perfis de usuario. Quem procura comida italiana, japonesa, mineira ou churrascaria, por exemplo, pode segmentar os resultados com poucos cliques. Tambem e possivel acessar informacoes detalhadas de cada estabelecimento, incluindo faixa de preco, horarios de funcionamento e comentarios recentes da comunidade. O objetivo e dar ao usuario contexto suficiente para escolher com tranquilidade.</p>
+        <p>Outro componente central e o sistema de avaliacoes e comentarios. Cada visita pode gerar um relato publico que ajuda outras pessoas a entenderem melhor o local antes de sair de casa. Em vez de depender apenas de marketing ou fotos promocionais, o usuario passa a contar com percepcoes reais sobre atendimento, qualidade da comida e ambiente. Assim, o SaborBH funciona como uma rede colaborativa de recomendacoes, na qual a experiencia de um cliente pode orientar positivamente a escolha de muitos outros.</p>
+
+        <h3>3. Beneficios para os usuarios</h3>
+        <p>Entre os principais beneficios para os usuarios, o primeiro e a economia de tempo. Com uma interface organizada e filtros inteligentes, a busca por restaurantes deixa de ser cansativa e passa a ser objetiva. O usuario nao precisa abrir dezenas de abas, comparar plataformas diferentes ou lidar com informacoes conflitantes. Em poucos minutos, ele encontra opcoes compativeis com o bairro, com o tipo de culinaria e com o orcamento esperado.</p>
+        <p>Outro ponto forte e a descoberta de novos lugares. Muitas pessoas acabam frequentando sempre os mesmos restaurantes por falta de visibilidade de outras opcoes. O SaborBH amplia esse repertorio ao exibir casas menos conhecidas, estabelecimentos recem-abertos e experiencias diferentes espalhadas por BH. Isso torna a rotina mais variada e incentiva a exploracao da cena gastronomica local.</p>
+        <p>As avaliacoes confiaveis tambem geram vantagem direta para quem usa o aplicativo. Ao consultar opinioes de outros clientes, o usuario reduz o risco de escolhas ruins e aumenta as chances de ter uma boa experiencia. Alem disso, o acesso a informacoes completas como horarios, preco medio e observacoes do cardapio facilita o planejamento, seja para um almoco rapido, um encontro em casal, uma reuniao de trabalho ou uma comemoracao especial.</p>
+
+        <h3>4. Beneficios para os restaurantes</h3>
+        <p>Os restaurantes cadastrados tambem se beneficiam de maneira significativa. O primeiro ganho e a visibilidade digital. Em um mercado competitivo, estar presente em uma plataforma focada em BH aumenta as oportunidades de ser encontrado por novos clientes, especialmente por pessoas que estao buscando exatamente o tipo de culinaria oferecida. Isso e importante tanto para casas tradicionais quanto para negocios em fase de crescimento.</p>
+        <p>Outro beneficio relevante e o feedback direto do publico. Por meio das avaliacoes e comentarios, os estabelecimentos passam a enxergar com mais clareza os pontos fortes e as oportunidades de melhoria no atendimento, no ambiente e no cardapio. Esse retorno, quando bem utilizado, pode orientar ajustes rapidos e elevar o nivel de satisfacao dos clientes.</p>
+        <p>Com maior visibilidade e melhor entendimento das preferencias do publico, a tendencia e o aumento de clientela. Restaurantes com boas notas e comentarios consistentes ganham reputacao positiva e passam a receber mais visitas, inclusive de pessoas que ainda nao conheciam a casa. Assim, o SaborBH atua como um canal de promocao qualificada, favorecendo relacoes mais sustentaveis entre consumidores e empreendedores locais.</p>
+
+        <h3>5. Sistema de avaliacoes</h3>
+        <p>O sistema de avaliacoes do SaborBH foi desenhado para ser claro e detalhado. O usuario pode classificar sua experiencia por estrelas, oferecendo uma visao rapida da percepcao geral. Alem da nota principal, a plataforma considera categorias especificas que ajudam a interpretar a qualidade do local de forma mais completa: seguranca, iluminacao, movimentacao, comida e atendimento. Esse modelo evita analises superficiais e traz mais contexto para quem vai escolher.</p>
+        <p>Por exemplo, um restaurante pode ter excelente comida, mas receber observacoes sobre atendimento em horarios de pico. Outro pode se destacar por ambiente agradavel e boa iluminacao para encontros noturnos. Ao separar criterios, o SaborBH permite que cada pessoa priorize o que considera mais importante. Quem valoriza rapidez no servico, quem busca ambiente tranquilo ou quem quer opcoes acessiveis encontra informacoes mais precisas.</p>
+        <p>Os comentarios publicos complementam as notas com relatos objetivos de experiencia. Para manter a confiabilidade da comunidade, a plataforma adota diretrizes de convivio e moderacao, incentivando opinioes respeitosas, construtivas e baseadas em fatos. Esse cuidado preserva a utilidade do sistema e fortalece a credibilidade das recomendacoes.</p>
+
+        <h3>6. Funcionalidades futuras</h3>
+        <p>O SaborBH foi criado com base solida, mas com visao de evolucao continua. Entre as funcionalidades futuras planejadas, uma das mais aguardadas e a reserva online, permitindo que o usuario garanta mesa diretamente pelo aplicativo, sem necessidade de contato externo. Esse recurso tende a simplificar a jornada e aumentar a conversao para os restaurantes parceiros.</p>
+        <p>Outra frente de crescimento e o delivery integrado. A ideia e concentrar, em um unico ambiente, a descoberta do restaurante e a opcao de pedido para entrega, quando disponivel. Isso torna a experiencia mais completa e conveniente, especialmente para quem quer praticidade no dia a dia.</p>
+        <p>Tambem estao previstas iniciativas de programa de fidelidade, com beneficios para usuarios frequentes, e notificacoes inteligentes de promocoes, eventos gastronomicos e novidades de estabelecimentos favoritos. Com essas evolucoes, o SaborBH amplia seu valor como plataforma de relacionamento continuo entre publico e restaurantes.</p>
+
+        <h3>7. Tecnologia</h3>
+        <p>Do ponto de vista tecnico, o SaborBH adota uma abordagem moderna baseada em site responsivo, garantindo boa experiencia em computador, tablet e celular. O layout se adapta automaticamente a diferentes larguras de tela, com organizacao em multiplas colunas no desktop e fluxo simplificado em uma coluna no mobile. Esse comportamento e essencial para atender perfis variados de uso, desde pesquisas planejadas em casa ate buscas rapidas na rua.</p>
+        <p>O design prioriza legibilidade, navegacao intuitiva e desempenho. Elementos visuais como cards, menus adaptativos, modais e efeitos de transicao foram pensados para tornar a interacao natural sem comprometer velocidade. O resultado e uma interface moderna, objetiva e amigavel, que facilita o acesso as informacoes mais importantes em poucos toques.</p>
+        <p>A arquitetura tambem considera evolucao incremental, permitindo adicionar novas funcionalidades sem perder consistencia. Essa base tecnica favorece manutencao, escalabilidade e continuidade do projeto, aspectos fundamentais para qualquer plataforma digital que pretende crescer com qualidade.</p>
+
+        <h3>8. Impacto social</h3>
+        <p>O impacto social do SaborBH vai alem da conveniencia para quem busca onde comer. A plataforma ajuda pequenos restaurantes a ganharem visibilidade em um ambiente digital no qual grandes marcas costumam dominar. Ao destacar negocios locais e estimular descobertas fora dos circuitos mais obvios, o aplicativo contribui para uma distribuicao mais equilibrada de oportunidades.</p>
+        <p>Esse movimento fortalece a economia de bairro, gera circulacao de renda e valoriza empreendedores que muitas vezes dependem do boca a boca para crescer. Quando um restaurante de pequeno porte recebe boas avaliacoes e passa a ser encontrado com facilidade, ele amplia chances de consolidacao e de geracao de empregos.</p>
+        <p>Ao fomentar a gastronomia local de BH, o SaborBH tambem preserva identidades culinarias, incentiva diversidade de experiencias e reforca o papel da comida como elemento cultural e de convivio social. Assim, a tecnologia se torna instrumento pratico de desenvolvimento local.</p>
+
+        <h3>9. Compromisso com qualidade</h3>
+        <p>O compromisso com qualidade e um pilar do SaborBH. A plataforma busca manter dados de restaurantes atualizados, com verificacao progressiva de informacoes essenciais, como localizacao, horarios e categorias de servico. Esse cuidado reduz ruidos e aumenta a confiabilidade para o usuario final.</p>
+        <p>No campo das avaliacoes, a moderacao tem papel central para preservar um ambiente justo e util. Comentarios ofensivos, duplicados ou sem relacao com a experiencia real podem ser revisados, sempre com foco na transparencia e no equilibrio entre liberdade de opiniao e responsabilidade. O objetivo e garantir que as notas representem experiencias autenicas e ajudem de fato na tomada de decisao.</p>
+        <p>Combinando tecnologia responsiva, comunidade ativa e curadoria de informacoes, o SaborBH se posiciona como uma solucao completa para quem deseja explorar a gastronomia de Belo Horizonte com mais seguranca, praticidade e prazer. O aplicativo nasce para resolver uma necessidade cotidiana, mas com potencial de gerar valor duradouro para usuarios, restaurantes e para a cidade como um todo.</p>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2026 SaborBH</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

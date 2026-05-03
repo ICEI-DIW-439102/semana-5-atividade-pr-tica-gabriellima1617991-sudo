@@ -20,13 +20,13 @@ Nessa atividade,vamos evoluir o projeto para que a home-page funcione bem tanto 
 
 ## 📸 Preview do Projeto
 
-![Tela 1](img/site1.png)
+![Tela 1](imgsite1.png)
 
 
 
 ## Print da versão responsiva com CSS puro [MOBILE] (*)
 
-![Tela 2](img/site2.png)
+![Tela 2](imgsite2.png)
 
 
 (*) Utilize as ferramentas do desenvolvedor do seu navegador para colocar no modo reponsivo, escolha um celular qualquer e recarregue a página antes de tirar o print. 

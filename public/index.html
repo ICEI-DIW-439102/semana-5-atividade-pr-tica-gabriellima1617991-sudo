@@ -1,78 +1,192 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LPC Restaurantes</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaborBH - Descubra restaurantes em Belo Horizonte</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <div class="logo">🍽️ LPC</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Restaurantes</a>
-        <a href="#">Contato</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Descubra os melhores restaurantes</h1>
-    <p>Experiências gastronômicas perto de você</p>
-
-    <div class="busca">
-        <input type="text" id="localizacao" placeholder="Digite sua localização">
-        <button onclick="buscar()">Buscar</button>
+  <!-- HEADER -->
+  <header class="top-header">
+    <div class="brand">
+      <img src="img/logo-chef.jpeg" alt="Logo SaborBH" class="brand-logo">
+      <div class="brand-text">
+        <h1>SaborBH</h1>
+        <p>Guia gastronômico de Belo Horizonte</p>
+      </div>
     </div>
-</section>
 
-<section class="container">
+    <form class="search-box" id="searchForm">
+      <input type="search" id="searchInput" placeholder="Buscar restaurante por nome..." aria-label="Buscar restaurante">
+      <button type="submit">🔍 Buscar</button>
+    </form>
 
-    <div class="card">
-        <img src="img/r1.jpg">
-        <div class="info">
-            <h2>Serra Azul</h2>
-            <p>Alta gastronomia brasileira</p>
-            <div class="botoes">
-                <button onclick="detalhes('Serra Azul')">Detalhes</button>
-                <button onclick="feedback()">Feedback</button>
-            </div>
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">🌙 Tema</button>
+      <button id="sidebarToggle" class="icon-btn desktop-only" type="button" aria-label="Toggle menu lateral">☰ Menu</button>
+      <button id="hamburgerBtn" class="icon-btn mobile-only" type="button" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV (hamburger expandível) -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="active"><span class="nav-icon">🏠</span> Home</a>
+    <a href="#restaurantes"><span class="nav-icon">🍽️</span> Restaurantes</a>
+    <a href="sobre.html"><span class="nav-icon">ℹ️</span> Sobre</a>
+    <a href="#configuracoes"><span class="nav-icon">⚙️</span> Configurações</a>
+    <a href="#avaliacoes"><span class="nav-icon">⭐</span> Avaliações</a>
+    <a href="#publicacoes"><span class="nav-icon">📰</span> Publicações</a>
+    <a href="#feedback"><span class="nav-icon">💬</span> Feedback</a>
+  </nav>
+
+  <!-- APP SHELL: sidebar + main -->
+  <div class="app-shell">
+
+    <!-- SIDEBAR DESKTOP -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-label">Navegação</div>
+      <nav>
+        <a href="index.html" class="active"><span class="nav-icon">🏠</span> Home</a>
+        <a href="#restaurantes"><span class="nav-icon">🍽️</span> Restaurantes</a>
+        <a href="sobre.html"><span class="nav-icon">ℹ️</span> Sobre</a>
+      </nav>
+      <div class="sidebar-label">Minha Conta</div>
+      <nav>
+        <a href="#configuracoes"><span class="nav-icon">⚙️</span> Configurações</a>
+        <a href="#avaliacoes"><span class="nav-icon">⭐</span> Avaliações</a>
+        <a href="#publicacoes"><span class="nav-icon">📰</span> Publicações</a>
+        <a href="#feedback"><span class="nav-icon">💬</span> Feedback</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero">
+        <h2>Bem-vindo ao SaborBH 🍴</h2>
+        <p>Encontre os restaurantes mais bem avaliados de Belo Horizonte, compare experiências reais e escolha sua próxima refeição com praticidade e confiança.</p>
+      </section>
+
+      <!-- CARDS DE RESTAURANTES -->
+      <section id="restaurantes">
+        <div class="section-title">
+          <h3>Restaurantes em Destaque</h3>
+          <a href="sobre.html" class="text-link">Conheça mais sobre o app →</a>
         </div>
-    </div>
 
-    <div class="card">
-        <img src="img/r2.jpg">
-        <div class="info">
-            <h2>Trattoria Bella</h2>
-            <p>Italiana sofisticada</p>
-            <div class="botoes">
-                <button onclick="detalhes('Trattoria Bella')">Detalhes</button>
-                <button onclick="feedback()">Feedback</button>
+        <div class="cards-grid" id="restaurantGrid">
+
+          <!-- Card 1 -->
+          <article class="restaurant-card" data-name="Cantina Bella Italia">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Ambiente da Cantina Bella Italia">
+              <span class="card-badge badge-italiana">🍝 Italiana</span>
             </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="img/r3.jpg">
-        <div class="info">
-            <h2>Sushi Prime</h2>
-            <p>Japonesa premium</p>
-            <div class="botoes">
-                <button onclick="detalhes('Sushi Prime')">Detalhes</button>
-                <button onclick="feedback()">Feedback</button>
+            <div class="card-body">
+              <h4>Cantina Bella Italia</h4>
+              <p class="address">📍 Savassi, Belo Horizonte - MG</p>
+              <p class="stars">★★★★★ <span class="rating-num">4.8</span></p>
+              <p class="desc">Massas artesanais, risotos cremosos e um ambiente acolhedor para jantar em família ou encontros especiais.</p>
+              <div class="card-actions">
+                <button type="button" class="btn btn-details" data-id="cantina">🔎 Detalhes</button>
+                <button type="button" class="btn btn-feedback" data-id="cantina">💬 Feedback</button>
+              </div>
             </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="restaurant-card" data-name="Sushi Zen Garden">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Pratos do Sushi Zen Garden">
+              <span class="card-badge badge-japonesa">🍣 Japonesa</span>
+            </div>
+            <div class="card-body">
+              <h4>Sushi Zen Garden</h4>
+              <p class="address">📍 Lourdes, Belo Horizonte - MG</p>
+              <p class="stars">★★★★☆ <span class="rating-num">4.6</span></p>
+              <p class="desc">Combinados frescos, sashimis premium e atendimento atento em um espaço moderno inspirado na cultura japonesa.</p>
+              <div class="card-actions">
+                <button type="button" class="btn btn-details" data-id="sushi">🔎 Detalhes</button>
+                <button type="button" class="btn btn-feedback" data-id="sushi">💬 Feedback</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="restaurant-card" data-name="Churrascaria Fogo Gaucho">
+            <div class="card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" alt="Prato da Churrascaria Fogo Gaúcho">
+              <span class="card-badge badge-churrasco">🥩 Churrasco</span>
+            </div>
+            <div class="card-body">
+              <h4>Churrascaria Fogo Gaúcho</h4>
+              <p class="address">📍 Pampulha, Belo Horizonte - MG</p>
+              <p class="stars">★★★★★ <span class="rating-num">4.9</span></p>
+              <p class="desc">Rodízio completo com cortes nobres, buffet variado e ambiente espaçoso para almoços e celebrações.</p>
+              <div class="card-actions">
+                <button type="button" class="btn btn-details" data-id="churrasco">🔎 Detalhes</button>
+                <button type="button" class="btn btn-feedback" data-id="churrasco">💬 Feedback</button>
+              </div>
+            </div>
+          </article>
+
         </div>
+      </section>
+
+      <!-- ADICIONADOS RECENTEMENTE -->
+      <section class="recent-section" id="publicacoes">
+        <h3>📅 Adicionados Recentemente</h3>
+        <ul class="recent-list">
+          <li>Bistrô da Praça — Funcionários, BH</li>
+          <li>Empório Mineiro — Santa Tereza, BH</li>
+          <li>Casa do Hambúrguer Artesanal — Cidade Nova, BH</li>
+        </ul>
+      </section>
+
+    </main>
+  </div><!-- /.app-shell -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <strong>SaborBH</strong> — Guia gastronômico de Belo Horizonte</p>
+  </footer>
+
+  <!-- MODAL: DETALHES -->
+  <div class="modal-overlay" id="detailsModal" aria-hidden="true">
+    <div class="modal-box">
+      <button type="button" class="close-modal" data-close="detailsModal" aria-label="Fechar">✕</button>
+      <h3 id="detailsTitle">Detalhes do restaurante</h3>
+      <p id="detailsContent"></p>
     </div>
+  </div>
 
-</section>
+  <!-- MODAL: FEEDBACK -->
+  <div class="modal-overlay" id="feedbackModal" aria-hidden="true">
+    <div class="modal-box">
+      <button type="button" class="close-modal" data-close="feedbackModal" aria-label="Fechar">✕</button>
+      <h3>💬 Enviar Feedback</h3>
+      <form id="feedbackForm">
+        <input type="hidden" id="feedbackRestaurant">
+        <label for="ratingSelect">Avaliação por estrelas</label>
+        <select id="ratingSelect" required>
+          <option value="">Selecione a nota</option>
+          <option value="1">⭐ 1 estrela</option>
+          <option value="2">⭐⭐ 2 estrelas</option>
+          <option value="3">⭐⭐⭐ 3 estrelas</option>
+          <option value="4">⭐⭐⭐⭐ 4 estrelas</option>
+          <option value="5">⭐⭐⭐⭐⭐ 5 estrelas</option>
+        </select>
+        <label for="feedbackComment">Seu comentário</label>
+        <textarea id="feedbackComment" rows="4" placeholder="Conte sua experiência..." required></textarea>
+        <button type="submit" class="btn submit-btn">Enviar Feedback 🚀</button>
+      </form>
+      <p id="feedbackMessage" class="feedback-message"></p>
+    </div>
+  </div>
 
-<footer>
-    © 2026 LPC
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-<a href="sobre.html">Sobre</a>
